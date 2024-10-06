@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Canvas - anima</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Criação de anima">
+        <meta name="keywords" content="Jogo, Canvas, JavaScript, HTML, CSS">
+        <meta name="author" content="Dio">
+        <link rel="shortcut icon" href="img/ovni.png">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript">
+            function mov(){
+                
+                //Área do Jogo:
+                var canvas = document.getElementById('area');
+                var context = canvas.getContext('2d');
+                
+                var posX =0;
+                var posY =0;
+                
+                var w =20;
+                var h= 50;
+                
+                desenharPersonagem();
+                function desenharPersonagem(){
+                    context.clearRect(0,0,canvas.width,canvas.height);
+                    //define a cor 1º
+                    context.fillStyle='blue';
+                    //desenha retangulo 
+                    context.fillRect(posX,posY,w,h);
+                }
+                
+                //mov do teclado
+                document.addEventListener('keydown', function(evento){
+                  //alert(evento.keyCode);
+                    
+                    
+                    var fimW = canvas.width-w;
+                    var fimH = canvas.height-h;
+                    
+                    if(evento.keyCode == 39 &&  posX<fimW){
+                        posX +=8;
+                        desenharPersonagem();
+                        
+                    }else if(evento.keyCode == 37 && posX>0){
+                        posX -=8;
+                        desenharPersonagem();
+                    }else if(evento.keyCode == 38 && posY>0){
+                        posY -=8;
+                        desenharPersonagem();
+                    }else if(evento.keyCode == 40 && posY<fimH){
+                        posY +=8;
+                        desenharPersonagem();
+                    }else if(evento.keyCode == 13){
+                        posX=0;
+                        posY=0;
+                        desenharPersonagem();
+                    }
+              });
+                                        
+                  
+                //alert('oi');
+                                    
+            }
+        </script>
+    </head>
+    <body onload="mov()">
+        <canvas id="area" width="500" height="500"></canvas>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

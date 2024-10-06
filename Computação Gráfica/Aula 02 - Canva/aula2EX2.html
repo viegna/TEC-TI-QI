@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title> Canvas - Jogos em Canvas</title>
+        <meta charset="UTF-8">
+        <meta name="Description" content="Jogos em canvas - uso de JS, Elemento canvas e CSS">
+        <meta name="Keywords" content="canvas,JavaScript, CSS, HTML, Jogos">
+        <meta name="author" content="WillianChagas">
+        <link rel="shortcut icon" href="img/i%CC%81cone-aula-bonus.png">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
+
+        <script type="text/javascript">
+            function desenhar(){
+                //Habilitar a área de desenhos
+                var canvas = document.getElementById('meucanvas');
+                //Criando um personagem
+                var context = canvas.getContext('2d');
+                //Criando figura Geométrica:
+                //Formatação:
+                //Cor do preenchimento:
+                context.fillStyle = 'rgba(222,184,135,0.6)';
+                //Cor de contorno:
+                context.strokeStyle = 'red';
+                //Linha de contorno:
+                context.lineWidth = 3;
+
+                var x=0;
+                var y=0;
+                var w=120;
+                var h=120;
+                for(var i=0; i<8; i++){
+                    context.fillRect(x,y,w,h);
+                    context.strokeRect(x,y,w,h);
+                    x += 30;//x = x + 30
+                    y += 30;
+                    
+                if(i<3){
+                    w -=20;
+                    h -=20;
+                }
+                else if(i==3){
+
+                }
+                else{
+                    w +=20;
+                    h +=20;
+                }
+                    
+                }
+            } 
+
+        </script>
+
+
+
+    </head>
+    <body onload="desenhar()">
+        <canvas id="meucanvas" width="300" height="300">
+
+
+
+
+
+
+        </canvas>
+
+
+    </body>
+
+
+
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype  html>
+<html lang="pt-br">
+	<head>
+        <title>Exemplo 11 Canvas Desenhando heart </title>
+        <meta charset="utf-8">
+        <meta name="description" content="aula canvas, aprendendo a criar desenhos e incorporar circulo em jogos.">
+        <meta name="author" content="Diogenes Oliveira">
+        <meta name="keywords" content="canva, jogos, heart, elementos">
+        <link rel="shortcut icon" href="img/icon.png">
+        <script type="text/javascript">
+            function heart(){
+                //canvas e contexto
+                var canvas=document.getElementById('meucanvas');
+                var b=canvas.getContext('2d');
+        
+                //curvas retas p criar coração
+                b.beginPath();
+                b.moveTo(75,40);
+                b.bezierCurveTo(75,37,70,25,50,25);
+                b.bezierCurveTo(20,25,20,62.5,20,62.5);
+                b.bezierCurveTo(20,80,40,102,75,120);
+                b.bezierCurveTo(110,102,130,80,130,62.5);
+                b.bezierCurveTo(130,62.5,130,25,100,25);
+                b.bezierCurveTo(85,25,75,37,75,40);
+                b.fillStyle = '#f00'
+                b.fill();
+            }
+        </script>
+    </head>
+    <body onload="heart()">
+        <canvas id="meucanvas" width="300" height="300"></canvas>
+    </body>
+</html>

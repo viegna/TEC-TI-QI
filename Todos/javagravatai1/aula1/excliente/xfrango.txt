@@ -1,0 +1,14 @@
+public class XFrango {
+    
+    public static void main(String args[]) {
+        System.out.println("\f");
+        
+        Cliente cliente = new Cliente();
+        
+        cliente.setNome("Zé");
+        cliente.setIdade(30);
+        
+        System.out.println(cliente.toString());
+        
+    }//fecha main
+}//fecha classe

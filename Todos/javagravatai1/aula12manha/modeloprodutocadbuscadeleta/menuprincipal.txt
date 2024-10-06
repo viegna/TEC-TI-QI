@@ -1,0 +1,4 @@
+    public MenuPrincipal() {
+        initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+    }

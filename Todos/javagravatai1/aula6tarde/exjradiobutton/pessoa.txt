@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.edu.qi.modelo;
+
+/**
+ *
+ * @author Thiago Cury
+ * @version 1.0
+ * @since 24/06/19 - 13:44
+ */
+public class Pessoa {
+    
+    private String nome;
+    private String sexo;
+
+    public Pessoa() {
+    }
+
+    /**
+     * 
+     * @param nome asdfasd
+     * @param sexo sadfasdasfd
+     */
+    public Pessoa(String nome, String sexo) {
+        this.nome = nome;
+        this.sexo = sexo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    /**
+     * 
+     * @return aasdfasdfasd
+     */
+    public String verificarSexo() {
+        if(sexo.equalsIgnoreCase("Masculino")) {
+            return "Você é homem!";
+        }
+        return "Você é mulher!";
+    }
+    
+    @Override
+    public String toString() {
+        return "\nNome = " + nome 
+             + "\nSexo = " + sexo
+             + "\nVerificação do sexo = " + verificarSexo();
+    }
+}//fecha classe

@@ -1,0 +1,50 @@
+package br.edu.qi.modelo;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Alunos
+ */
+public class Calculadora {
+    
+    //sem atributo, a única maneira de entrar é via parâmetro.
+    
+    public Calculadora() {
+    }
+ 
+    private double somar(double numero1, double numero2) {
+        return numero1 + numero2;
+    }
+
+    private double subtrair(double numero1, double numero2) {
+        return numero1 - numero2;
+    }
+
+    private double dividir(double numero1, double numero2) {
+        return numero1 / numero2;
+    }
+
+    private double multiplicar(double numero1, double numero2) {
+        return numero1 * numero2;
+    }
+
+    public String verificarOpcao(String opcao, double numero1, double numero2) {
+     if(opcao.equalsIgnoreCase("somar")) {
+            return "a soma é: " + somar(numero1, numero2);
+        } else if(opcao.equalsIgnoreCase("subtrair")) {
+            return "a subtração é: " + subtrair(numero1, numero2);
+        } else if(opcao.equalsIgnoreCase("multiplicar")) {
+            return "a multiplicação é: " + multiplicar(numero1, numero2);
+        } else if(opcao.equalsIgnoreCase("dividir")) {
+            return "a divisão é: " + dividir(numero1, numero2);
+        } else {
+            return "todos: ";
+        }   
+    }
+    
+}

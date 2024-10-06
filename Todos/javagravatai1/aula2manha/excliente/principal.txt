@@ -1,0 +1,15 @@
+public class Principal {
+    public static void main(String args[]) {
+    
+        System.out.println("\f"); //so para quem tá no bluej
+        
+        /* toda primeira palavra em minusculo. a partir da segunda primeira letra
+           de cada palavra em maiusculo.*/
+        Cliente cliente = new Cliente();
+        
+        cliente.setNome("Zé");
+        cliente.setSexo("Masculino");
+        
+        System.out.println(cliente.toString());
+    }//fecha main
+}//fecha classe
