@@ -1,0 +1,133 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.edu.qi.model;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Thiago Cury
+ * @version 1.0
+* @since 18/06/19 - 08:59
+ */
+public class PessoaTest {
+    
+    private static final Pessoa PESSOA = new Pessoa();
+    
+    public PessoaTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+        PESSOA.setNome("ZE");
+        PESSOA.setIdade(30);
+        PESSOA.setPeso(80);
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+        PESSOA.setIdade(30);
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of getNome method, of class Pessoa.
+     */
+    @Test
+    public void testGetNome() {
+    }
+
+    /**
+     * Test of setNome method, of class Pessoa.
+     */
+    @Test
+    public void testSetNome() {
+    }
+
+    /**
+     * Test of getPeso method, of class Pessoa.
+     */
+    @Test
+    public void testGetPeso() {
+    }
+
+    /**
+     * Test of setPeso method, of class Pessoa.
+     */
+    @Test
+    public void testSetPeso() {
+    }
+
+    /**
+     * Test of getIdade method, of class Pessoa.
+     */
+    @Test
+    public void testGetIdade() {
+    }
+
+    /**
+     * Test of setIdade method, of class Pessoa.
+     */
+    @Test
+    public void testSetIdade() {
+    }
+
+    /**
+     * Test of verificarIdade method, of class Pessoa.
+     */
+    @Test
+    public void testSomeMethod() {
+    }
+    
+    /**
+     * Test of verificarIdade method, of class Pessoa.
+     */
+    @Test
+    public void testVerificarIdade() {
+        assertEquals("Maior de idade!", PESSOA.verificarIdade());
+        PESSOA.setIdade(17);
+        assertEquals("Menor de idade!", PESSOA.verificarIdade());
+        PESSOA.setIdade(18);
+        assertEquals("aí sim! 18 afú! vai trabalhar.... para de jogar LOL.", PESSOA.verificarIdade());
+        
+    }
+
+    /**
+     * Test of verificarPesoMaisDezPorCento method, of class Pessoa.
+     */
+    @Test
+    public void testVerificarPesoMaisDezPorCento() {
+        assertEquals(88.0, PESSOA.verificarPesoMaisDezPorCento(), 0.0);
+    }
+
+    /**
+     * Test of calcularIdadeMeses method, of class Pessoa.
+     */
+    @Test
+    public void testCalcularIdadeMeses() {
+        assertEquals(360, PESSOA.calcularIdadeMeses());
+    }
+
+    /**
+     * Test of toString method, of class Pessoa.
+     *	/
+    @Test
+    public void testToString() {
+    }
+    
+}

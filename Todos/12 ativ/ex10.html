@@ -1,0 +1,32 @@
+<!doctype  html>
+<html lang="pt-br">
+	<head>
+        <title>Exemplo 10 Canvas Desenhando bezier </title>
+        <meta charset="utf-8">
+        <meta name="description" content="aula canvas, aprendendo a criar desenhos e incorporar circulo em jogos.">
+        <meta name="author" content="Diogenes Oliveira">
+        <meta name="keywords" content="canva, jogos, bezier, elementos">
+        <link rel="shortcut icon" href="img/icon.png">
+        <script type="text/javascript">
+            function bezier(){
+                //canvas e contexto
+                var canvas=document.getElementById('meucanvas');
+                var b=canvas.getContext('2d');
+        
+                //ex de curva
+                b.beginPath();
+                b.moveTo(75,25);
+                b.quadraticCurveTo(25,25,25,62.5);
+                b.quadraticCurveTo(25,100,50,100);
+                b.quadraticCurveTo(50,120,30,125);
+                b.quadraticCurveTo(60,120,65,100);
+                b.quadraticCurveTo(125,100,125,62.5);
+                b.quadraticCurveTo(125,25,75,25);
+                b.stroke();
+            }
+        </script>
+    </head>
+    <body onload="bezier()">
+        <canvas id="meucanvas" width="300" height="300"></canvas>
+    </body>
+</html>

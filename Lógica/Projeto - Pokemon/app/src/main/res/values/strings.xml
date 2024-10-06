@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="ss_tv_loading">LOADING...</string>
+    <string name="ma_et_nome">Nome</string>
+    <string name="ma_et_senha">Senha</string>
+    <string name="ma_bt_cadastrar">cadastrar</string>
+    <string name="ma_bt_limpar">limpar</string>
+</resources>

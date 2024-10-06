@@ -1,0 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.edu.qi.interfaces;
+
+/**
+ *
+ * @author Alunos
+ */
+public interface CalculadoraInterface {
+    
+    public double somar(double numero1, double numero2);
+    public double subtrair(double numero1, double numero2);
+    public double multiplicar(double numero1, double numero2);
+    public double dividir(double numero1, double numero2);
+    public String verificarOpcao(String opcao, double numero1, double numero2);
+
+}

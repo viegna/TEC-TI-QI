@@ -1,0 +1,32 @@
+<!doctype  html>
+<html lang="pt-br">
+	<head>
+        <title>Exemplo 2 Canvas Desenhano elementos</title>
+        <meta charset="utf-8">
+        <meta name="description" content="aula canvas, aprendendo a criar desenhos e incorporar svg em jogos.">
+        <meta name="author" content="Diogenes Oliveira">
+        <meta name="keywords" content="canva, jogos, sprites, elementos">
+        <link rel="shortcut icon" href="img/icon.png">
+        <script type="text/javascript">
+            function draw(){
+                //canvas e contexto
+                var canvas=document.getElementById('meucanvas');
+                var context=canvas.getContext('2d');
+                
+                //define a cor 1º
+                context.fillStyle='rgb(221,160,221)'
+                //desenha retangulo 
+                context.fillRect(5,5,100,100);
+                // 2º
+                context.fillStyle = 'rgba(255,192,203,0.7)';
+                context.fillRect(50,50,100,100);
+                // 3º
+                context.fillStyle = 'rgba(100,149,237,0.7)';
+                context.fillRect(95,95,100,100);
+            }
+        </script>
+    </head>
+    <body onload="draw()">
+        <canvas id="meucanvas" width="300" height="300"></canvas>
+    </body>
+</html>
