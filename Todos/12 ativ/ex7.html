@@ -1,0 +1,41 @@
+<!doctype  html>
+<html lang="pt-br">
+	<head>
+        <title>Exemplo 7 Canvas Desenhando estrela </title>
+        <meta charset="utf-8">
+        <meta name="description" content="aula canvas, aprendendo a criar desenhos e incorporar circulo em jogos.">
+        <meta name="author" content="Diogenes Oliveira">
+        <meta name="keywords" content="canva, jogos, estrela, elementos">
+        <link rel="shortcut icon" href="img/icon.png">
+        <script type="text/javascript">
+            function draw(){
+                //canvas e contexto
+                var canvas=document.getElementById('meucanvas');
+                var context=canvas.getContext('2d');
+                
+                //inicia o caminho
+                context.beginPath();
+                context.fillStyle= 'pink';
+                //desenha estrela
+                context.moveTo(75,250);//ponto inic
+                context.lineTo(150,50);
+                context.lineTo(225,250);
+                context.lineTo(50,120);
+                context.lineTo(250,120);
+                context.lineTo(75,250);
+                
+                 //definindo largura do contorno 
+                context.lineWidth= 5;
+                // cor de contorno 
+                context.strokeStyle = 'rgb(25,25,112)';
+                
+                //traça linhas do caminho
+                context.stroke();
+                context.fill();
+            }
+        </script>
+    </head>
+    <body onload="draw()">
+        <canvas id="meucanvas" width="300" height="300"></canvas>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+Desenvolva um programa que leia nome de um produto e valor. Seu programa deve mostrar o valor com 12% de juros e o valor com 5% de desconto. 

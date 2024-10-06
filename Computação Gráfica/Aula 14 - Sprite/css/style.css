@@ -1,0 +1,14 @@
+@charset "utf-8";
+@author "Diogenes Oliveira";
+
+body{
+    background-color: aliceblue;
+    display: flex;
+    
+}
+
+canvas{
+    background-color: aquamarine;
+    border: 2px solid gray;
+    margin: 0 auto;
+}

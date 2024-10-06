@@ -1,0 +1,221 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.edu.qi.model;
+
+/**
+ *
+ * @author Henrique Silva Camargo
+ * @version 1.0 Ashley
+ * @since 26/06/2019 - 08:45
+ */
+public class Aluno {
+    
+    private String nome;
+    private String sobrenome;
+    private String sexo;
+    private double nota1;
+    private double nota2;
+    private double peso1;
+    private double peso2;
+    private int totalAula;
+    private int numeroPresenca;
+
+    public Aluno() {
+    }
+
+    /**
+     * 
+     * @param nome Recebe nome.
+     * @param sobrenome Recebe Sobrenome.
+     * @param sexo Recebe Sexo.
+     * @param nota1 Recebe primeira nota.
+     * @param nota2 Recebe segunda nota.
+     * @param peso1 Recebe primeiro peso.
+     * @param peso2 Recebe segundo peso.
+     * @param totalAula Recebe Total de Aulas.
+     * @param numeroPresenca Recebe o numero de presença.
+     */
+    public Aluno(String nome, String sobrenome, String sexo, double nota1, double nota2, double peso1, double peso2, int totalAula, int numeroPresenca) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.sexo = sexo;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.peso1 = peso1;
+        this.peso2 = peso2;
+        this.totalAula = totalAula;
+        this.numeroPresenca = numeroPresenca;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+    
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public double getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    public double getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+
+    public double getPeso1() {
+        return peso1;
+    }
+
+    public void setPeso1(double peso1) {
+        this.peso1 = peso1;
+    }
+
+    public double getPeso2() {
+        return peso2;
+    }
+
+    public void setPeso2(double peso2) {
+        this.peso2 = peso2;
+    }
+
+    public int getTotalAula() {
+        return totalAula;
+    }
+
+    public void setTotalAula(int totalAula) {
+        this.totalAula = totalAula;
+    }
+
+    public int getNumeroPresenca() {
+        return numeroPresenca;
+    }
+
+    public void setNumeroPresenca(int numeroPresenca) {
+        this.numeroPresenca = numeroPresenca;
+    }
+
+    /**
+     * 
+     * @return Retorna o resultado da media aritmetica. 
+     *         Resultado da primeira nota mais segunda nota divido por dois.
+     */
+    public double mediaAritmetica() { //verbo no infinitivo
+        return (nota1 + nota2) / 2;
+    }
+    
+    /**
+     * 
+     * @return Retonar o resultado da porcentagem de frequencia.
+     *         Numero de presença vezes cem dividido pelo total de aulas.
+     */
+    public double verificarFrequencia() {
+        return (numeroPresenca * 100) / totalAula;
+    }
+    
+    /**
+     * 
+     * @return Retorna Aprovado/Reprovado junto com a situação.
+     */
+    public String verificarSituacao() {
+        if (mediaAritmetica()>=6 && verificarFrequencia()>=75) {
+            return "Aprovado.";
+        } else if (mediaAritmetica()<6 && verificarFrequencia()>=75) {
+            return "Reprovado por nota.";
+        } else if (mediaAritmetica()>=6 && verificarFrequencia()<75) {
+            return "Reprovado por frequencia.";
+        } else {
+            return "Reprovado.";
+        }
+    }
+    
+    /**
+     * 
+     * @return Retorna o conceito baseado na media aritmetica (A/B/C/D).
+     */
+    public String verificarConceito() {
+        if (mediaAritmetica()>=9  && mediaAritmetica()<=10) {
+            return "A";
+        } else if (mediaAritmetica()>=8 && mediaAritmetica()<9) {
+            return "B";
+        } else if (mediaAritmetica()>=6 && mediaAritmetica()<8) {
+            return "C";
+        } else {
+            return "D";
+        }
+    }
+    
+    /**
+     * 
+     * @return Retorna a media ponderada.
+     *         Primeira nota vezes primeiro peso, Segunda nota vezes segundo 
+     *         peso, Soma dos dois resultados dividido pela soma do Primeiro
+     *         peso e Segundo peso.
+     */
+    public double mediaPonderada() { //verbo no infinitivo 
+        return (nota1*peso1+nota2*peso2)/(peso1+peso2);
+    }
+    
+    /**
+     * 
+     * @param numero1 asdfasf
+     * @param numero2 asdfasdf
+     * @return asdfasdasdf
+     * @throws ArithmeticException Esse método pode gerar exceção de divisao por zero.
+     * @exception sadfajsdfklasjdfklajsdlkfjalg
+     */
+    public int dividir(int numero1, int numero2) throws ArithmeticException {
+        int resposta = 0;
+        try {
+            resposta = numero1 / numero2;
+        } catch (ArithmeticException arithmeticException) {
+            throw new ArithmeticException("ERRO DE MATEMÁTICA! DIVISÃO BIZERRO!");
+        }
+        return resposta;
+    }
+    
+    @Override
+    public String toString() {
+        return "\nNome = " + nome 
+                + "\nSobrenome = " + sobrenome 
+                + "\nSexo = " + sexo 
+                + "\nNota1 = " + nota1 
+                + "\nNota2 = " + nota2 
+                + "\nPeso1 = " + peso1 
+                + "\nPeso2 = " + peso2 
+                + "\nTotal de Aula = " + totalAula 
+                + "\nNumero de Presença = " + numeroPresenca
+                + "\nMédia Aritmética = " + mediaAritmetica()
+                + "\nFrequencia = " + verificarFrequencia() + "%"
+                + "\nSituação do Aluno = " + verificarSituacao()
+                + "\nConceito = " + verificarConceito()
+                + "\nMédia Ponderada = " + mediaPonderada();
+    }
+}

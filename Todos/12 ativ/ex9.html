@@ -1,0 +1,34 @@
+<!doctype  html>
+<html lang="pt-br">
+	<head>
+        <title>Exemplo 9 Canvas Desenhando smile </title>
+        <meta charset="utf-8">
+        <meta name="description" content="aula canvas, aprendendo a criar desenhos e incorporar circulo em jogos.">
+        <meta name="author" content="Diogenes Oliveira">
+        <meta name="keywords" content="canva, jogos, smile, elementos">
+        <link rel="shortcut icon" href="img/icon.png">
+        <script type="text/javascript">
+            function smile(){
+                //canvas e contexto
+                var canvas=document.getElementById('meucanvas');
+                var context=canvas.getContext('2d');
+        
+                
+                //primeiro arco 
+                context.beginPath();//começa caminho
+               //desenha
+                context.arc(75,75,50,0,Math.PI*2,true);//circulo do rosto
+                context.moveTo(110,75);
+                context.arc(75,75,35,0,Math.PI,false);//boca em sentido horario
+                context.moveTo(65,65);
+                context.arc(60,65,5,0,Math.PI*2,true);
+                context.moveTo(95,65);
+                context.arc(90,65,5,0,Math.PI*2,true);
+                context.stroke();
+            }
+        </script>
+    </head>
+    <body onload="smile()">
+        <canvas id="meucanvas" width="300" height="300"></canvas>
+    </body>
+</html>

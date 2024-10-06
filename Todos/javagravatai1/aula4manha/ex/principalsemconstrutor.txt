@@ -1,0 +1,62 @@
+	/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.edu.qi.view;
+
+import br.edu.qi.model.Pessoa;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Thiago Cury
+ * @version 1.0
+ * @since 18/06/19 - 09:15
+ */
+public class Principal {
+    
+    public static void main(String[] args) {
+    
+        Pessoa pessoa = new Pessoa();
+        
+        pessoa.setNome(
+                JOptionPane.showInputDialog(null,
+                            "Digite seu nome:",
+                            "entrada",
+                            JOptionPane.QUESTION_MESSAGE));
+
+        pessoa.setPeso(
+                Double.parseDouble(
+                JOptionPane.showInputDialog(null,
+                            "Digite seu peso:",
+                            "entrada",
+                            JOptionPane.QUESTION_MESSAGE)));
+
+        pessoa.setIdade(
+                Integer.parseInt(
+                JOptionPane.showInputDialog(
+                            null,
+                            "Digite sua idade:",
+                            "entrada",
+                            JOptionPane.QUESTION_MESSAGE)));
+        
+        int op = JOptionPane.showConfirmDialog(
+                null,
+                "Voce deseja ver os dados?!",
+                "Confirmação",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        
+        if(op == 0) {
+            JOptionPane.showMessageDialog(
+                null, 
+                "Dados: " + pessoa.toString(),
+                "Relatorio",
+                JOptionPane.PLAIN_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "troxa!");
+        }
+    }//fecha main
+    
+}//fecha classe

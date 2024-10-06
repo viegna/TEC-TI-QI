@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package visao;
+
+import javax.swing.JOptionPane;
+import modelo.Pessoa;
+
+/**
+ *
+ * @author Thiago Cury
+ * @version 1.0.1 Beta Stark
+ * @since 17/06/19 - 10:32
+ */
+public class Principal {
+    //psvm + TAB
+    public static void main(String[] args) {
+        
+        Pessoa pessoa = new Pessoa();
+        
+         	
+        
+        pessoa.setPeso(
+                Double.parseDouble(
+                    JOptionPane.showInputDialog(
+                        null,
+                        "Digite o seu peso: ",
+                        "Entrada legal :-)",
+                        JOptionPane.QUESTION_MESSAGE)));
+        
+        pessoa.setIdade(
+                Integer.parseInt(
+                    JOptionPane.showInputDialog(
+                        null,
+                        "Digite a sua idade: ",
+                        "Entrada legal :-)",
+                        JOptionPane.QUESTION_MESSAGE)));
+        
+        JOptionPane.showMessageDialog(
+                null, 
+                pessoa.toString(),
+                "Relatório",
+                JOptionPane.PLAIN_MESSAGE);
+        
+    }//fecha main
+}//fecha classe

@@ -1,0 +1,107 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package modelo;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Thiago Cury
+ * @since 17/06/19 - 14:58
+ * @version 1.0.1 Beta Stark
+ */
+public class PessoaTest {
+    
+    private static final Pessoa PESSOA = new Pessoa();
+    
+    public PessoaTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+        System.out.println("entrou no setUpClass");
+        PESSOA.setNome("Zé");
+        PESSOA.setPeso(80);
+        PESSOA.setIdade(30);
+    }
+    @AfterClass
+    public static void tearDownClass() {
+        System.out.println("entrou no tearDownClass");
+        System.out.println("OBJ: " + PESSOA.toString());
+    }
+    @Before
+    public void setUp() {
+        System.out.println("entrou no setUp");
+    }
+    @After
+    public void tearDown() {
+        System.out.println("entrou no tearDown");
+    }
+
+    /**
+     * Test of getNome method, of class Pessoa.
+     */
+    @Test
+    public void testGetNome() {
+    }
+
+    /**
+     * Test of setNome method, of class Pessoa.
+     */
+    @Test
+    public void testSetNome() {
+    }
+
+    /**
+     * Test of getPeso method, of class Pessoa.
+     */
+    @Test
+    public void testGetPeso() {
+    }
+
+    /**
+     * Test of setPeso method, of class Pessoa.
+     */
+    @Test
+    public void testSetPeso() {
+    }
+
+    /**
+     * Test of getIdade method, of class Pessoa.
+     */
+    @Test
+    public void testGetIdade() {
+    }
+
+    /**
+     * Test of setIdade method, of class Pessoa.
+     */
+    @Test
+    public void testSetIdade() {
+    }
+
+    /**
+     * Test of calcularIdadeMeses method, of class Pessoa.
+     */
+    @Test
+    public void testCalcularIdadeMeses() {
+        assertEquals(360, PESSOA.calcularIdadeMeses());
+        PESSOA.setIdade(1);
+        assertEquals(12, PESSOA.calcularIdadeMeses());
+    }
+    
+    /**
+     * Test of toString method, of class Pessoa.
+     */
+    @Test
+    public void testToString() {
+    }   
+}

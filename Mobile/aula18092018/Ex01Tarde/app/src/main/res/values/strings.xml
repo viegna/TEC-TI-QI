@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ex01Tarde</string>
+    <string name="red">RED</string>
+    <string name="orange">ORANGE</string>
+    <string name="yellow">YELLOW</string>
+    <string name="green">GREEN</string>
+    <string name="blue">BLUE</string>
+    <string name="indigo">INDIGO</string>
+    <string name="pink">PINK</string>
+
+
+
+
+</resources>

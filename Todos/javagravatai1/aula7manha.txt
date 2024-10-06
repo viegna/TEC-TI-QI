@@ -1,0 +1,11 @@
+1 - FUAQ modele a classe de um retângulo, sendo que o mesmo possui atributos: altura e largura. Você deve calcular a área e o perímetro do retângulo.
+
+No entanto, lembre-se o usuário deverá ser capaz de escolher o que ele quer visualizar.
+1 - area
+2 - perimetro
+3 - todos
+
+- radiobutton
+- colocar o button group
+- setar o actioncommand em todas as radiobuttons
+?
